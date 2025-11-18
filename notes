@@ -1,3 +1,30 @@
 1. Write some codes in app.py --> In Treminal [python app.py]
 2. Create a "requirements.txt" file
-3. Create a file named "dockerfile" and add content in it.
+3. Create a file named "dockerfile" and add content in it. [For Creating An Image Of Docker With All The things like: OS, Dependencies, Codes, virtual-Env, Programming-Language.]
+4. Run code [docker build -t <name-u-want> . (docker build -t docker-demo .)] {Ye likhne se "image" wale tab me jayega docker-desktop ke}
+5. Build an docker Image run command on powershell or VScode Terminal Both [docker run -p 5000:5000 <name-u-want> (docker run -p 5000:5000 docker-demo {same upar wala})] {Ye likhne se "container" wale tab me jayega docker-desktop ke}
+
+
+Notes: yaha 5000:5000 [Jo pehla 5000 hai, wah hamare docker image ka port hai jo humne apne "dockerfile" me likha hai "EXPOSE 5000", Aur dusra 5000 hamare "Stytem" ka port hai ]
+
+
+
+
+Below-Commands We Can Execute From VSCode Terminal OR, Docker-Desktop Terminal OR Power-Shell All Three.
+
+6. Tag Your Image: docker tag <project-name> user-name/<project-name>:latest1 [docker tag docker-demo akkukumar1234/docker-demo:latest1]
+7. Push Image To DockerHub: docker push user-name/<project-name>:latest1 [docker push akkukumar1234/docker-demo:latest1]
+
+8. Pull Image From DockerHub: docker pull user-name/<project-name>:latest1 [docker pull akkukumar1234/docker-demo:latest1]
+
+9. Run The Pulled Image: docker run -p 5000:5000 user-name/<project-name>:latest1 [docker run -p 5000:5000 akkukumar1234/docker-demo:latest1]
+
+
+Jab hume docker-hub se docker image lakar run karna ho
+
+In The Docker Terminal
+1. docker pull <repo-name> [Docker Desktop Ke "Image" Tab Me Jayega]
+2. docker run <repo-name> [Docker Desktop Ke "Container" Tab Me Jayega]
+
+
+Jab Pura Kam Khatm Ho Jayega Tab, Hume Ise Github Pe Push Kar Dena Chahiye
